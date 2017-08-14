@@ -28,8 +28,9 @@
 
     		$arr = explode('/',$path);
 
-    		if(count($arr) ==2){  // dashboar/index  也就是数组中有两个内容的时候
-    			$path = '/views/'.$path;
+    		if(count($arr) ==2){  // dashboard/index  也就是数组中有两个内容的时候
+//    			$path = '/views/'.$path;
+    			$path = '/views/'.$arr[0].'/'.$arr[1];
     		}else if(count($arr)==1){ // index
     		    $path = '/views/dashboard/'.$path;
     		}
@@ -51,4 +52,8 @@
     //studyit.com/index.php/index
     //studyit.com/index.php
     //studyit.com
+    //studyit.com/views/dashboard/index
+    // studyit.com/dashboard/index
+    //studyit.com/index
+
 ?>
